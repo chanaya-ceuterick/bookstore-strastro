@@ -434,7 +434,7 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
   collectionName: 'books';
   info: {
     description: '';
-    displayName: 'book';
+    displayName: 'Book';
     pluralName: 'books';
     singularName: 'book';
   };

@@ -20,8 +20,11 @@
       "required": true,
       "unique": true
     },
-    "description": {
-      "type": "text"
+    "books": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::book.book",
+      "mappedBy": "categories"
     }
   }
 }

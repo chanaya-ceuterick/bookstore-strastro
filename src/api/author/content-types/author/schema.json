@@ -23,8 +23,11 @@
     "bio": {
       "type": "text"
     },
-    "birthDate": {
-      "type": "date"
+    "books": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::book.book",
+      "mappedBy": "authors"
     }
   }
 }

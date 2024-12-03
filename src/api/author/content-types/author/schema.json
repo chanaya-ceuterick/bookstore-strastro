@@ -12,23 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "authorId": {
+      "type": "uid"
+    },
     "name": {
-      "type": "string"
+      "type": "string",
+      "unique": false,
+      "required": true
     },
-    "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+    "bio": {
+      "type": "text"
     },
-    "email": {
-      "type": "string"
-    },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "author"
+    "birthDate": {
+      "type": "date"
     }
   }
 }

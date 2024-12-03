@@ -448,7 +448,7 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::category.category'
     >;
-    cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    cover: Schema.Attribute.Media<'images' | 'files'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

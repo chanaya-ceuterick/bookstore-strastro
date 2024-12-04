@@ -51,6 +51,12 @@
     },
     "bestseller": {
       "type": "boolean"
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "book"
     }
   }
 }

@@ -12,8 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "authorId": {
-      "type": "uid"
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     },
     "name": {
       "type": "string",

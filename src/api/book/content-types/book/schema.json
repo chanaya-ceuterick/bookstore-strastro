@@ -12,8 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "bookId": {
-      "type": "uid"
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     },
     "title": {
       "type": "string",
@@ -47,6 +48,9 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "books"
+    },
+    "bestseller": {
+      "type": "boolean"
     }
   }
 }

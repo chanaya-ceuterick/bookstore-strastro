@@ -419,10 +419,6 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::category.category'
     >;
-    collection: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::collection.collection'
-    >;
     cover: Schema.Attribute.Media<'images' | 'files'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -479,6 +475,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
   collectionName: 'collections';
   info: {
+    description: '';
     displayName: 'collection';
     pluralName: 'collections';
     singularName: 'collection';
@@ -487,7 +484,6 @@ export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    book: Schema.Attribute.Relation<'oneToMany', 'api::book.book'>;
     books: Schema.Attribute.Relation<'oneToMany', 'api::book.book'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -503,6 +499,7 @@ export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

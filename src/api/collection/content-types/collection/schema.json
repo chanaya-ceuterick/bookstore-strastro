@@ -4,7 +4,8 @@
   "info": {
     "singularName": "collection",
     "pluralName": "collections",
-    "displayName": "collection"
+    "displayName": "collection",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -25,11 +26,9 @@
       "relation": "oneToMany",
       "target": "api::book.book"
     },
-    "book": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::book.book",
-      "mappedBy": "collection"
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
